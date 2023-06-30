@@ -1,24 +1,6 @@
 #include"Calculations.h"
 #include <string>
 
-///Function for addition
-///Need to check.
-int Calculations::addition(int x, int y) {
-    return x + y;
-}
-
-
-///Function for addition
-///Check to see if this works.
-unsigned int Calculations::minus(unsigned int x, unsigned int y) {
-    return x + y;
-}
-
-///Set the right side of the equation.
-void Calculations::setRightSide(float rSide) {
-    r_Side = rSide;
-}
-
 ///Function for division.
 ///Need to check.
 float Calculations::operator/(float l_Side) {
@@ -40,24 +22,27 @@ int Calculations::dot_product(int vector_a[], int vector_b[]) {
     return product;
 }
 
-///Return a map.
-///Need to check the strings are correct.
-std::map<int, std::string> Calculations::outputValues(int value[]) {
-    for (int i = 0; i < (sizeof(value) / sizeof(*value)); i++) {
-        std::string s_map = "Value: " + std::to_string(i);
-        m_map.insert({ i,s_map });
-        std::cout << "Value  " << i << " " << value[i] << std::endl;
+int Calculations::findFib(signed int n)
+{
+    if (n <= 0) {
+        std::cout << "Input error." << std::endl;
+        return 0;
+    }
+    else {
+        if (n <= 1)
+            return n;
+        return findFib(n - 1) + findFib(n - 2);
     }
 
-    return m_map;
 }
 
-bool Calculations::checkPrime(int n)
+
+bool Calculations::checkPrime(signed int n)
 {
     /// Create a boolean array
     /// "prime[0..n]" and initialize
     /// all entries as true.
-    std::vector<bool> prime(n + 1);
+    std::vector<bool> prime( + 1);
     std::fill(prime.begin(), prime.end(), n + 1);
 
     for (int p = 2; p * p <= n; p++)

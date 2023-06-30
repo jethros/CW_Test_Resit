@@ -14,17 +14,6 @@ public:
 	/// </summary>
 	Calculations() {};
 
-	///Function for addition
-	///Need to run through GoogleTest.
-	int addition(int x, int y);
-
-	///Function for addition
-	///Need to run through GoogleTest.
-	unsigned int minus(unsigned int x, unsigned int y);
-
-	///Set the right side of the equation.
-	void setRightSide(float rSide);
-
 	///Function for division.
 	///Need to run through GoogleTest.
 	float operator/(float l_Side);
@@ -37,12 +26,12 @@ public:
 	///Need to run through GoogleTest.
 	int dot_product(int vector_a[], int vector_b[]);
 
-	///Output a map of strings.
-	///Need to run through GoogleTest.
-	std::map<int, std::string> outputValues(int values[]);
-
 	/// Check for primes.
 	///Need to run through GoogleTest.
-	bool checkPrime(int n);
+	bool checkPrime(signed int n);
+
+	///Find a Fibonacci number
+	///Need to run through GoogleTest.
+	int findFib(signed int n);
 
 };

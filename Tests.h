@@ -47,6 +47,8 @@ protected:
 };
 
 TEST_F(Testing, test) {
-    EXPECT_TRUE(t);
-    EXPECT_FALSE(t);
+    //The form of a test in its simpliest form. You need to replace this and
+    //add more for each of the reqquired types as specified in the coursework outline. 
+    EXPECT_TRUE(true);
+    EXPECT_FALSE(true);
 }
